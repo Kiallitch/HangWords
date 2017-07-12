@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    {{#game}}
+      <div>
+        You have {{turns}} guesses left.
+      </div>
+      <br>
+      <div>
+      {{playerStatus}}
+      </div>
+    <br>
+    <div>
+      <form action="/" method="post">
+        <fieldset style="border:none;">
+          <!-- <label for="guess">Guess a letter:</label> -->
+          <input type="text" name="letter" placeholder="Guess a letter" maxlength="1">
+          <input type="submit">
+        </fieldset>
+      </form>
+    </div>
+    <br>
+    <div>
+
+      Letters guessed: {{lettersGuessed}}
+    </div>
+    {{/game}}
+  </body>
+</html>
